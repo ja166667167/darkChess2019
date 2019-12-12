@@ -1,0 +1,37 @@
+* 8:59am March 31, 2019
+* Player1 vs Player2
+* 1 2 2 2 2 2 5 1 2 2 2 2 2 5
+* X X X X
+* X X X X
+* X X X X
+* X X X X
+* X X X X
+* X X X X
+* X X X X
+* X X X X
+* first 2
+* time 900
+* 1. a1(r) a7(g)
+* 2. b2(p) a4(C)
+* 3. d5(G) c1(c)
+* 4. b1(k) c7(m)
+* 5. c6(G) c6-c7
+* 6. d2(R) c2(N)
+* 7. d7(R) c2-c1
+* 8. c3(p) a6(P)
+* 9. c5(M) b7(K)
+* 10. d1(M) b7-a7
+* 11. a5(p) a6-a5
+* 12. c4(p) a4-c4
+* 13. d3(N) d3-c3
+* 14. d6(r) d7-d6
+* 15. b6(m) b8(P)
+* 16. d4(n) d5-d4
+* 17. b4(P) a5-a6
+* 18. c8(p) b8-c8
+* 19. a3(P) b5(c)
+* 20. d8(n) c5-b5
+* 21. b3(C) b5-b6
+* 22. a2(P) b3-b1
+* 23. a8(g)
+* Comment 0 0
