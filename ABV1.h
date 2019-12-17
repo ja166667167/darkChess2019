@@ -13,6 +13,6 @@ using namespace std;
 
 int maxNode(treeNode*,int,int);
 int minNode(treeNode*,int,int);
-
+int getNodeCount();
 
 #endif

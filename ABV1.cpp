@@ -1,6 +1,6 @@
 #include"ABV1.h"
 
-int const depthLimit = 3;
+int const depthLimit = 10;
 
 int depthCount = 0;
 int nodeCount = 0;
@@ -12,7 +12,8 @@ int maxNode(treeNode *thisNode,int alpha,int beta){
     
     if(depthLimit==depthCount){
 
-        cout << thisNode->nodeBoard.scoreBoard() << endl;
+        cout << "score="<<thisNode->nodeBoard.scoreBoard() << endl;
+        depthCount--;
         return thisNode->nodeBoard.scoreBoard();
         
     }
@@ -27,11 +28,12 @@ int maxNode(treeNode *thisNode,int alpha,int beta){
             nodeCount++;
             treeNode *nextNode = new treeNode(thisNode->nodeBoard.possibility[i]);
             printf("max new Board i=%d\n",i);/////////////////////////////////////////
-            nextNode->nodeBoard.printAll();//////////////////////
-
-            thisNode->children[i] = nextNode;
+           // nextNode->nodeBoard.printAll();//////////////////////
+            //cout << "OK" << endl;
+            thisNode->children.push_back(nextNode);
+            //cout << "OK" << endl;
             nextNode->parent = thisNode;
-
+            //cout << "OK" << endl;
             depthCount++;
             int t = minNode(nextNode,m,beta);
 
@@ -54,7 +56,8 @@ int minNode(treeNode *thisNode,int alpha,int beta){
     //thisNode->nodeBoard.printBoard();
     if(depthLimit==depthCount){
 
-        cout << thisNode->nodeBoard.scoreBoard() << endl;
+        cout <<"score="<< thisNode->nodeBoard.scoreBoard() << endl;
+        depthCount--;
         return thisNode->nodeBoard.scoreBoard();
     }
     else{
@@ -68,10 +71,12 @@ int minNode(treeNode *thisNode,int alpha,int beta){
             nodeCount++;
             treeNode *nextNode = new treeNode(thisNode->nodeBoard.possibility[i]);
             printf("min new Board i=%d\n",i);/////////////////////////////////////////
-            nextNode->nodeBoard.printAll();//////////////////////
+            //nextNode->nodeBoard.printAll();//////////////////////
 
-            thisNode->children[i] = nextNode;
+            thisNode->children.push_back(nextNode);
+            //cout << "OK" << endl;
             nextNode->parent = thisNode;
+            //cout << "OK" << endl;
 
             depthCount++;
             int t = maxNode(nextNode,alpha,m);
@@ -87,5 +92,9 @@ int minNode(treeNode *thisNode,int alpha,int beta){
     }
     cout << "Min m=" << m << endl;//////////////////////////////////////
     return m;
+
+}
+int getNodeCount(){
+    return nodeCount;
 }
 

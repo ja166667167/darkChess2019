@@ -10,6 +10,7 @@ int main(){
     root->nodeBoard.printAll();
     int result =0;
     result = maxNode(root, -100, 100);
-    printf("retrun =%d",result);
+    printf("retrun =%d\n",result);
+    printf("nodeCount=%d\n",getNodeCount());
     return 0;
 }
